@@ -12,11 +12,19 @@ namespace Lab7CSharp
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
+
+        static void Task_1()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Task1());
+        }
+
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Task2());
         }
     }
 }
