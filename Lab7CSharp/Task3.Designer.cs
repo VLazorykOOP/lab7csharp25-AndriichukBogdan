@@ -29,12 +29,11 @@
             this.buttonColor = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCanvas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColor)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBoxCanvas
-            // 
+  
             this.pictureBoxCanvas.BackColor = System.Drawing.Color.White;
             this.pictureBoxCanvas.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxCanvas.Name = "pictureBoxCanvas";
@@ -42,9 +41,7 @@
             this.pictureBoxCanvas.TabIndex = 0;
             this.pictureBoxCanvas.TabStop = false;
             this.pictureBoxCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxCanvas_Paint);
-            // 
-            // buttonCreate
-            // 
+            
             this.buttonCreate.Location = new System.Drawing.Point(530, 160);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(100, 30);
@@ -52,9 +49,7 @@
             this.buttonCreate.Text = "Створити";
             this.buttonCreate.UseVisualStyleBackColor = true;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
-            // 
-            // comboBoxShape
-            // 
+            
             this.comboBoxShape.FormattingEnabled = true;
             this.comboBoxShape.Items.AddRange(new object[] {
             "Квадрат",
@@ -63,18 +58,14 @@
             "Ромб"});
             this.comboBoxShape.Location = new System.Drawing.Point(530, 30);
             this.comboBoxShape.Name = "comboBoxShape";
-            this.comboBoxShape.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxShape.Size = new System.Drawing.Size(121, 28);
             this.comboBoxShape.TabIndex = 2;
-            // 
-            // textBoxText
-            // 
+
             this.textBoxText.Location = new System.Drawing.Point(530, 70);
             this.textBoxText.Name = "textBoxText";
-            this.textBoxText.Size = new System.Drawing.Size(121, 20);
+            this.textBoxText.Size = new System.Drawing.Size(121, 26);
             this.textBoxText.TabIndex = 3;
-            // 
-            // pictureBoxColor
-            // 
+        
             this.pictureBoxColor.BackColor = System.Drawing.Color.Red;
             this.pictureBoxColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxColor.Location = new System.Drawing.Point(530, 110);
@@ -82,9 +73,8 @@
             this.pictureBoxColor.Size = new System.Drawing.Size(40, 20);
             this.pictureBoxColor.TabIndex = 4;
             this.pictureBoxColor.TabStop = false;
-            // 
-            // buttonColor
-            // 
+            this.pictureBoxColor.Click += new System.EventHandler(this.pictureBoxColor_Click);
+
             this.buttonColor.Location = new System.Drawing.Point(580, 110);
             this.buttonColor.Name = "buttonColor";
             this.buttonColor.Size = new System.Drawing.Size(70, 23);
@@ -92,15 +82,13 @@
             this.buttonColor.Text = "Колір";
             this.buttonColor.UseVisualStyleBackColor = true;
             this.buttonColor.Click += new System.EventHandler(this.buttonColor_Click);
-            // 
-            // label1
-            // 
+ 
             this.label1.Location = new System.Drawing.Point(530, 10);
-            this.label1.Text = "Тип фігури:";
+            this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 20);
-            // 
-            // Task3
-            // 
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Тип фігури:";
+
             this.ClientSize = new System.Drawing.Size(684, 331);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonColor);
@@ -115,6 +103,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
+
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

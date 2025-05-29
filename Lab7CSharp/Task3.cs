@@ -53,6 +53,11 @@ namespace Lab7CSharp
             if (colorDialog1.ShowDialog() == DialogResult.OK)
                 pictureBoxColor.BackColor = colorDialog1.Color;
         }
+
+        private void pictureBoxColor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     abstract class Shape
